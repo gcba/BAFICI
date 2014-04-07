@@ -1,0 +1,1 @@
+## En la carpeta 'app' van todos los scripts relacionados con la lógica de conexión con Arduino + Node.js + Socket.io
