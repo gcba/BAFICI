@@ -1,19 +1,14 @@
 
 
-
 BAFICI
 ======
 
 #### v1.00 Requisitos
 
 ### Hardware:
-<<<<<<< HEAD
-*
-=======
 * ---
->>>>>>> d48f4de05f203613ae5b559059235350b05a2f87
 
-### Software:
+### Frameworks:
 * NodeJS v0.10.26 - http://nodejs.org/
 * Processing 2.0.3 (32bits) - http://www.processing.org/
 * Grunt - http://gruntjs.com/
@@ -28,8 +23,6 @@ BAFICI
 ### Librerías Javascript
 * D3js v3 - http://d3js.org/
 * jquery v2.1.0 - http://jquery.com/
-
-
 
 ### Uso
 
@@ -46,3 +39,10 @@ BAFICI
 - Abrir en en browser `\public\BAFICI-v1.0.0.html`
 
 
+### Colaborá
+
+- Forkeá el proxyecto.
+- Crea un branch (git checkout -b mi_rama)
+- Commiteá tus cambios (git commit -am "Comentario del commit")
+- Hacé un Push a la rama (git push origin my_markup)
+- Abrí un [Pull Request](https://github.com/gcba/BAFICI/pulls)
