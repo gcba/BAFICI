@@ -1,10 +1,17 @@
+
+
+
 BAFICI
 ======
 
 #### v1.00 Requisitos
 
 ### Hardware:
+<<<<<<< HEAD
 *
+=======
+* ---
+>>>>>>> d48f4de05f203613ae5b559059235350b05a2f87
 
 ### Software:
 * NodeJS v0.10.26 - http://nodejs.org/
@@ -37,6 +44,5 @@ BAFICI
 - Ejecutar y correr `\app\Processing\receiverSerialP5_2f\receiverSerialP5_2f.pde` 
 
 - Abrir en en browser `\public\BAFICI-v1.0.0.html`
-
 
 
