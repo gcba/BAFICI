@@ -1,25 +1,28 @@
 BAFICI
 ======
 
-#### v1.00
+#### v1.00 Requisitos
 
-### Prerequisitos:
+### Hardware:
+*
+
+### Software:
 * NodeJS v0.10.26 - http://nodejs.org/
 * Processing 2.0.3 (32bits) - http://www.processing.org/
 * Grunt - http://gruntjs.com/
 
-
-### Dependencias:
-
+### Dependencias Node:
 * node-osc: "~0.7.3",
 * socket.io: "~0.6.1"
 * grunt-contrib-sass: "~0.7.3",
 * grunt-contrib-watch: "~0.6.1",
 * grunt: "^0.4.4"
 
-### Librerías
+### Librerías Javascript
 * D3js v3 - http://d3js.org/
 * jquery v2.1.0 - http://jquery.com/
+
+
 
 ### Uso
 

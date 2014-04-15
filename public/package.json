@@ -1,0 +1,16 @@
+{
+  "name": "BAFICI",
+  "version": "0.4.0",
+  "description": "Prototipo de test colaborativo de emociones",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Reynaga, Nicolás Lound, David Galavotti",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt": "^0.4.4"
+  }
+}

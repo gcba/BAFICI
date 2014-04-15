@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'Futura';
+  src: url("../fonts/futura-medium-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/futura-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/futura-medium-webfont.woff") format("woff"), url("../fonts/futura-medium-webfont.ttf") format("truetype"), url("../fonts/futura-medium-webfont.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+
+html {
+  -webkit-font-smoothing: subpixel-antialiased;
+  overflow: hidden;
+  cursor: none; }
+
+body {
+  font-family: 'Futura';
+  background-color: #19BED5;
+  background: url("../img/bkg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  z-index: 200; }
+  header h1 {
+    position: absolute;
+    width: 100%;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5em;
+    padding-top: 20px;
+    z-index: 100; }
+  header h1 span.left {
+    float: left;
+    padding-left: 90px; }
+  header h1 span.right {
+    float: right;
+    padding-right: 90px; }
+
+#logo {
+  display: block;
+  margin: 0px auto;
+  width: 400px;
+  height: 150px;
+  z-index: 55;
+  background: url("../img/logo.png") no-repeat 10px top;
+  background-size: 70%;
+  opacity: 0.5; }
+
+#force, #force-demo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 50; }
+
+#slides {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 100%;
+  z-index: 500; }
+  #slides .video {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 500;
+    width: 1280px;
+    height: 720px; }
+  #slides .slide {
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.8); }
+  #slides .uno {
+    padding-top: 320px; }
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+  z-index: 500; }
+  footer #emociones {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 40px; }
+    footer #emociones li {
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      width: 15%; }
+  footer #control {
+    position: absolute;
+    display: block;
+    width: auto;
+    bottom: 20px;
+    opacity: 0.5; }
+
+svg {
+  position: fixed; }
+
+circle {
+  shape-rendering: optimizeSpeed;
+  color-rendering: optimizeSpeed; }
+
+.sorpresa {
+  fill: #ddd472; }
+
+.felicidad {
+  fill: #f45949; }
+
+.indiferencia {
+  fill: #4c8f9c; }
+
+.tristeza {
+  fill: #c186ad; }
+
+.entusiasmo {
+  fill: #95ad64; }
+
+.decepcion {
+  fill: #9d8660; }
+
+.grande {
+  font-size: 120%; }
+
+.normal {
+  font-size: 100%; }
+
+.sorpresa span {
+  padding-bottom: 5px;
+  border-bottom: 5px #d4cd7b solid; }
+
+.felicidad span {
+  padding-bottom: 5px;
+  border-bottom: 5px #ea6153 solid; }
+
+.indiferencia span {
+  padding-bottom: 5px;
+  border-bottom: 5px #588790 solid; }
+
+.tristeza span {
+  padding-bottom: 5px;
+  border-bottom: 5px #b88faa solid; }
+
+.entusiasmo span {
+  padding-bottom: 5px;
+  border-bottom: 5px #91a170 solid; }
+
+.decepcion span {
+  padding-bottom: 5px;
+  border-bottom: 5px #90836d solid; }

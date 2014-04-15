@@ -1,0 +1,81 @@
+
+<!doctype html>
+<html>
+    <head>
+        <script src='http://localhost:3000/socket.io/socket.io.js'></script>
+		<style>
+			#contenedor{
+				witdh: 100%
+			}
+			#contenedor div {
+				float: left;
+				border: 1px solid black;
+				width: 100px;
+			}
+		</style>
+
+
+
+        <script>
+            var socket = io.connect('//localhost:3000');
+
+			socket.on('message', function (message) {
+				
+				var msg = message;
+				var i = msg.indexOf(",");
+				var s = msg.charAt(i-1);
+				var r = msg.slice(i+1,msg.length);
+				var sens = "sensor" + s;
+				var radi = "radio" + s;
+			
+				document.getElementById(sens).innerHTML = s;
+				document.getElementById(radi).innerHTML = r;
+			});
+        </script>
+    </head>
+    
+    <body>
+		<div id="contenedor">
+
+			<div>
+		    	Sensor: <span id="sensor0"> </span> <br>
+	    	    Radio: <span id='radio0'> </span>
+			</div>
+	
+			<div>
+		    	Sensor: <span id="sensor1"> </span> <br>
+	    	    Radio: <span id='radio1'> </span>
+			</div>
+	
+			<div>
+		    	Sensor: <span id="sensor2"> </span> <br>
+	    	    Radio: <span id='radio2'> </span>
+			</div>
+	
+			<div>
+		    	Sensor: <span id="sensor3"> </span> <br>
+	    	    Radio: <span id='radio3'> </span>
+			</div>
+	
+			<div>
+		    	Sensor: <span id="sensor4"> </span> <br>
+	    	    Radio: <span id='radio4'> </span>
+			</div>
+			
+	
+			<div>
+		    	Sensor: <span id="sensor5"> </span> <br>
+	    	    Radio: <span id='radio5'> </span>
+			</div>
+
+		</div>
+
+        <div id="chart"> </div>
+        
+    </body>
+</html>
+
+
+
+
+
