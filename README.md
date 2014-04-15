@@ -1,5 +1,4 @@
 
-
 BAFICI
 ======
 
@@ -42,7 +41,7 @@ BAFICI
 ### Colaborá
 
 - Forkeá el proxyecto.
-- Crea un branch (git checkout -b mi_rama)
-- Commiteá tus cambios (git commit -am "Comentario del commit")
+- Creá un branch (git checkout -b mi_rama)
+- Comiteá tus cambios (git commit -am "Comentario del commit")
 - Hacé un Push a la rama (git push origin my_markup)
 - Abrí un [Pull Request](https://github.com/gcba/BAFICI/pulls)
