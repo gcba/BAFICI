@@ -22,6 +22,11 @@ BAFICI
 * D3js v3 - http://d3js.org/
 * jquery v2.1.0 - http://jquery.com/
 
+### Librerías Processing
+* Librería OSC: http://www.sojamo.de/libraries/oscP5/
+* Librería Arduino: ya viene con la versión de Processing 2.0.3
+
+
 ### Uso
 
 - Instalar, por primera vez, desde la carpeta `app` las dependecias de node para node-osc y socket.io 
