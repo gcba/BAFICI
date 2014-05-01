@@ -12,6 +12,7 @@ BAFICI
 ### Frameworks:
 * NodeJS v0.10.26 - http://nodejs.org/
 * Processing 2.0.3 (32bits) - http://www.processing.org/
+* Arduino 1.0.5 - http://www.arduino.cc/
 * Grunt - http://gruntjs.com/
 
 ### Dependencias Node:
