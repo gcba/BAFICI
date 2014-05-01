@@ -4,7 +4,10 @@ BAFICI
 #### v1.00 Requisitos
 
 ### Hardware:
-* ---
+* Placa Arduino Mega (puede ser cualquier otra placa Arduino, solo hay q cambiar pines en código)
+* Sensores o interruptores (6 unidades)
+* Leds (6 unidades)
+* Placa experimental o shields para montaje de sensores y leds
 
 ### Frameworks:
 * NodeJS v0.10.26 - http://nodejs.org/
