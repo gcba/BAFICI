@@ -41,7 +41,7 @@ BAFICI
 
 		$ node app.js
 
-- Ejecutar y correr `\app\Processing\receiverSerialP5_2f\receiverSerialP5_2f.pde` 
+- Ejecutar y correr `\processing\receiverSerialP5_4c\receiverSerialP5_4c.pde` 
 
 - Abrir en en browser `\public\BAFICI-v1.0.0.html`
 
