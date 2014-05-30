@@ -16,8 +16,8 @@ BAFICI
 * Grunt - http://gruntjs.com/
 
 ### Dependencias Node:
-* node-osc: "~0.7.3",
-* socket.io: "~0.6.1"
+* node-osc: "~0.2.1",
+* socket.io: "~0.9.16"
 * grunt-contrib-sass: "~0.7.3",
 * grunt-contrib-watch: "~0.6.1",
 * grunt: "^0.4.4"
