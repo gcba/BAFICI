@@ -1,6 +1,6 @@
 {
   "name": "BAFICI",
-  "version": "1.0.s0",
+  "version": "1.0.0",
   "description": "Prototipo de test colaborativo de emociones",
   "main": "index.html",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "Cristian Reynaga, Nicolás Lound, David Galavotti",
   "license": "MIT",
   "devDependencies": {
-    "node-osc": "~0.7.3",
-    "socket.io": "~0.6.1"
+    "node-osc": "~0.2.1",
+    "socket.io": "~0.9.16"
   }
 }
