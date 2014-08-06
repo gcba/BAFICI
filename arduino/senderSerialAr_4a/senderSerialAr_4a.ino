@@ -37,6 +37,7 @@ dimmer led[ARRAY_SIZE];
 
 
 void setup() {
+  Serial.begin(115200);
     for (int i=0; i<ARRAY_SIZE; i++) {
           pinMode(ledPin[i], OUTPUT);
     }
