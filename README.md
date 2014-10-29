@@ -39,7 +39,9 @@ BAFICI
 
 		$ node app.js
 
-- Modificar el puerto donde está enchufado el Arduino y correr `\processing\receiverSerialP5_4c\receiverSerialP5_4c.pde` 
+- Modificar el puerto donde está enchufado el Arduino y correr
+
+		`\processing\receiverSerialP5_4c\receiverSerialP5_4c.pde` 
 
 - Abrir en en browser `\public\index.html`
 
