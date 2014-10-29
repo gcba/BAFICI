@@ -1,4 +1,5 @@
+**/data/data*
 .sass-cache/
+node_modules/
 .DS_Store
 thumbs.db
-.project

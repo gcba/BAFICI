@@ -35,15 +35,13 @@ BAFICI
 
 - Instalar, por primera vez, desde la carpeta `app` las dependecias de node para node-osc y socket.io 
 
-		$ grunt install
-
-- Ejecutar \v0\app\app.js
+		$ npm install
 
 		$ node app.js
 
-- Ejecutar y correr `\processing\receiverSerialP5_4c\receiverSerialP5_4c.pde` 
+- Modificar el puerto donde está enchufado el Arduino y correr `\processing\receiverSerialP5_4c\receiverSerialP5_4c.pde` 
 
-- Abrir en en browser `\public\BAFICI-v1.0.0.html`
+- Abrir en en browser `\public\index.html`
 
 
 ### Colaborá
