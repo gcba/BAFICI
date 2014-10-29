@@ -10,10 +10,10 @@ BAFICI
 * Placa experimental o shields para montaje de sensores y leds
 
 ### Frameworks:
-* NodeJS v0.10.26 - http://nodejs.org/
-* Processing 2.0.3 (32bits) - http://www.processing.org/
-* Arduino 1.0.5 - http://www.arduino.cc/
-* Grunt - http://gruntjs.com/
+* NodeJS v0.10.26 - [http://nodejs.org/](http://nodejs.org/)
+* Processing 2.0.3 (32bits) - [http://www.processing.org/](http://www.processing.org/)
+* Arduino 1.0.5 - [http://www.arduino.cc/](http://www.arduino.cc/)
+* Grunt - [http://gruntjs.com/](http://gruntjs.com/)
 
 ### Dependencias Node:
 * node-osc: "~0.2.1",
@@ -23,11 +23,12 @@ BAFICI
 * grunt: "^0.4.4"
 
 ### Librerías Javascript
-* D3js v3 - http://d3js.org/
-* jquery v2.1.0 - http://jquery.com/
+* D3js v3 - [http://d3js.org/](http://d3js.org/)
+* jquery v2.1.0 - [http://jquery.com/](http://jquery.com/)
+* Jquery Transform - [https://github.com/louisremi/jquery.transform.js](https://github.com/louisremi/jquery.transform.js)
 
 ### Librerías Processing
-* Librería OSC: http://www.sojamo.de/libraries/oscP5/
+* Librería OSC: [http://www.sojamo.de/libraries/oscP5/](http://www.sojamo.de/libraries/oscP5/)
 * Librería Arduino: ya viene con la versión de Processing 2.0.3
 
 
