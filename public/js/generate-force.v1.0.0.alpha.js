@@ -5,6 +5,18 @@
  * 
  */
 
+//acumulo los segundos donde no hubo actividad
+var tiempoInactivo = 0;
+setInterval(
+	function () {
+ 		tiempoInactivo++;
+		// activa el salvapantallas de reposo.
+ 		if (tiempoInactivo >= tiempoSalvapantallas){
+			$("#reposo").css("display", "block");
+			$("#reposo").animate({opacity: 1},750);
+		}
+	},1000);
+
 
 // Inicializo los nodos iniciales para force layout
 var	nodes = d3.range(n).map(function(data) {
@@ -203,7 +215,6 @@ socket.on('message', function(message) {
 
 	if ( msgSensor >  0 ){
 		if ( msg.charAt( i + 1 ) == 1 && sensores[msg.charAt( i - 1 )] == 0){
-		
 			sensores[msg.charAt( i - 1 )] = 1;
 			addNode(msg.charAt( i - 1 ), 1);
 			pointers[msg.charAt( i - 1 )] = svg.select("circle:last-child");
@@ -212,6 +223,10 @@ socket.on('message', function(message) {
 			// sensor activado
 			var nameSensor = "sensor" + msg.charAt( i - 1 );
 			var spanSensor = document.getElementById(nameSensor);
+			tiempoInactivo = 0;
+
+			$("#reposo").css("display", "none");
+			$("#reposo").css("opacity", "0");
 			
 			$(spanSensor).css("color", "rgba(255,255,255,1)");
 			$(spanSensor).parent().animate({transform: "translateY (-15px) scale (1.5,1.5)"},100);
@@ -286,3 +301,5 @@ socket.on('message', function(message) {
 		}
 	}
 });
+
+

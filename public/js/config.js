@@ -15,7 +15,8 @@ var width = 1280, // ancho del grafico
 	radioAcumulado = 0, // variable donde guardo el radio de todos los nodos en pantalla
 	supCirculos = 0, // variable donde guardo la superficie ocupada de los nodos en pantalla
 	limiteNodos = 200, // Threshold de display de nodos en pantalla
-	limitePorcentaje = 30; // Threshold de display de porcentaje de nodos en pantalla
+	limitePorcentaje = 30, // Threshold de display de porcentaje de nodos en pantalla
+    tiempoSalvapantallas = 6; // Tiempo a esperar para que se active el salvapantallas (en segundos)
 
 
 // variables globales especificas
