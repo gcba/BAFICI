@@ -213,6 +213,8 @@ socket.on('message', function(message) {
 			var nameSensor = "sensor" + msg.charAt( i - 1 );
 			var spanSensor = document.getElementById(nameSensor);
 			
+			$(spanSensor).parent().animate({transform: "scale(1.5,1.5)"},300);
+
 			pointers[msg.charAt( i - 1 )] 
 				.style("stroke-width", 5)
 				.style("stroke-alpha", 1)			
@@ -229,6 +231,9 @@ socket.on('message', function(message) {
 		// sensor desactivado
 		if ( msg.charAt( i +  1 ) == 0 && sensores[msg.charAt( i - 1 )] == 1){
 			
+			var resetear = $("#sensor" + sensores.indexOf(1)).parent();
+			$(resetear).animate({transform: "scale(1,1)"},20);
+
 			sensores[msg.charAt( i - 1 )] = 0;
 
 			pointers[msg.charAt( i - 1 )]
