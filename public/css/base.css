@@ -37,10 +37,12 @@ header {
     z-index: 100; }
   header h1 span.left {
     float: left;
-    padding-left: 90px; }
+    padding-left: 90px;
+    padding-top: 40px; }
   header h1 span.right {
     float: right;
-    padding-right: 90px; }
+    padding-right: 90px;
+    padding-top: 40px; }
 
 #logo {
   display: block;
