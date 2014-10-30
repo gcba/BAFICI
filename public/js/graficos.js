@@ -4,8 +4,8 @@
   */
 
 var archivo01 = ["datos/innovatiba_0.csv", "#chart1"],
-	archivo02 = ["datos/innovatiba_1.csv", "#chart2"],
-	archivo03 = ["datos/innovatiba_2.csv", "#chart3"];
+	archivo02 = ["!datos/innovatiba_1.csv", "#chart2"],
+	archivo03 = ["!datos/innovatiba_2.csv", "#chart3"];
 
 
 
@@ -26,7 +26,7 @@ function checkeoArchivos(archivo){
 
 function generoGrafico(archivo, svgid) {
     var width = 420,
-        barHeight = 30;
+        barHeight = 40;
 
     var x = d3.scale.linear()
         .range([0, width]);
@@ -60,7 +60,7 @@ function generoGrafico(archivo, svgid) {
         bar.append("text")
             .attr("x", 0)
             .attr("y", barHeight / 2)
-            .attr("dy", ".30em")
+            .attr("dy", ".26em")
             .text(function(d,i) {
                 return emociones[i];
             });

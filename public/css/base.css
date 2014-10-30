@@ -1,13 +1,18 @@
 @font-face {
-  font-family: 'Futura';
+  font-family: Futura;
+  font-weight: normal;
+  font-style: normal;
   src: url("../fonts/futura-medium-webfont.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/futura-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/futura-medium-webfont.woff") format("woff"), url("../fonts/futura-medium-webfont.ttf") format("truetype"), url("../fonts/futura-medium-webfont.svg#svgFontName") format("svg");
-  /* Legacy iOS */ }
+  src: url("../fonts/futura-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/futura-medium-webfont.woff") format("woff"), url("../fonts/futura-medium-webfont.ttf") format("truetype"), url("../fonts/futura-medium-webfont.svg#Futura") format("svg"); }
+@font-face {
+  font-family: Gotham Light;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Gotham-Light.eot");
+  src: url("../fonts/Gotham-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Light.woff") format("woff"), url("../fonts/Gotham-Light.ttf") format("truetype"), url("../fonts/Gotham-Light.svg#Gotham Light") format("svg"); }
 html {
   -webkit-font-smoothing: subpixel-antialiased;
   overflow: hidden;
-  cursor: none;
   height: 100%; }
 
 body {
@@ -126,14 +131,28 @@ footer {
   z-index: 3000;
   color: #fff; }
   #reposo h1 {
-    text-align: center; }
+    font-family: "Gotham Light", "Helvetica", _sans;
+    text-align: center;
+    font-weight: normal;
+    font-size: 5em;
+    text-transform: uppercase;
+    padding-top: 50px; }
 
 #graficos {
-  width: 100%; }
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  position: relative; }
   #graficos div {
-    display: inline-block;
-    width: 32%;
-    border: 1px solid red; }
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 420px;
+    display: block;
+    text-align: center;
+    margin: 0 auto; }
 
 svg {
   position: fixed; }
