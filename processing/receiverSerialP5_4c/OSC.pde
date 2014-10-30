@@ -66,11 +66,12 @@ class MessageOSC {
       //Cuando el botón deja de ser pulsado guardo el valor en memoria para luego volvar al .txt
       if (bPrinter) {
         output.println(hour()+":"+minute()+":"+second()+","+tagFlag+"," + temp);
+        temp_0=temp_0+temp;
+        //o1.println(tagFlag+","+"e");
         bPrinter=false;
       }
 
       //Si el botón no es pulsado envío un mensaje de valor 0 (cero) de forma contínua.
-
       counter=0;
       OscMessage myMessage = new OscMessage(tagFlag);
       myMessage.add(falseVal);
