@@ -28,7 +28,7 @@ int timerOff=50;
 
 
 int ledPin[]={7, 6, 5, 4, 3, 2};
-int sensorPin[]={30, 32, 34, 36, 38, 40};
+int sensorPin[]={40, 38, 36, 34, 32, 30};
 int valSensor[ARRAY_SIZE];
 int value[ARRAY_SIZE];
 

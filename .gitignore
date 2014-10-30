@@ -1,4 +1,5 @@
 assets/
+processing/receiverSerialP5_4c/data/
 **/data/data*
 .sass-cache/
 node_modules/

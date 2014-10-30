@@ -11,8 +11,7 @@ html {
 
 body {
   font-family: 'Futura';
-  background-color: #19BED5;
-  background: url("../img/bkg.png") no-repeat center center fixed;
+  background-color: #001635;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -45,8 +44,8 @@ header {
   width: 400px;
   height: 150px;
   z-index: 55;
-  background: url("../img/logo.png") no-repeat 10px top;
-  background-size: 70%;
+  background: url("../img/logo.svg") no-repeat 10px top;
+  background-size: 100%;
   opacity: 0.5; }
 
 #force, #force-demo {
@@ -124,22 +123,22 @@ circle {
   color-rendering: optimizeSpeed; }
 
 .sorpresa {
-  fill: #ddd472; }
+  fill: #fe1639; }
 
 .felicidad {
-  fill: #f45949; }
+  fill: #ff9900; }
 
 .indiferencia {
-  fill: #4c8f9c; }
+  fill: white; }
 
 .tristeza {
-  fill: #c186ad; }
+  fill: #baaaaa; }
 
 .entusiasmo {
-  fill: #95ad64; }
+  fill: #30fd80; }
 
 .decepcion {
-  fill: #9d8660; }
+  fill: #6d6897; }
 
 .grande {
   font-size: 120%; }
@@ -149,24 +148,24 @@ circle {
 
 .sorpresa span {
   padding-bottom: 5px;
-  border-bottom: 5px #d4cd7b solid; }
+  border-bottom: 5px #f22241 solid; }
 
 .felicidad span {
   padding-bottom: 5px;
-  border-bottom: 5px #ea6153 solid; }
+  border-bottom: 5px #ff9900 solid; }
 
 .indiferencia span {
   padding-bottom: 5px;
-  border-bottom: 5px #588790 solid; }
+  border-bottom: 5px white solid; }
 
 .tristeza span {
   padding-bottom: 5px;
-  border-bottom: 5px #b88faa solid; }
+  border-bottom: 5px #b2b2b2 solid; }
 
 .entusiasmo span {
   padding-bottom: 5px;
-  border-bottom: 5px #91a170 solid; }
+  border-bottom: 5px #3af282 solid; }
 
 .decepcion span {
   padding-bottom: 5px;
-  border-bottom: 5px #90836d solid; }
+  border-bottom: 5px #77758a solid; }

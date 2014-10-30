@@ -1,3 +1,15 @@
+/*
+
+$sorpresa: #f22241;
+$felicidad: #ff9900;
+$indiferencia: #ffffff;
+$tristeza: #b2b2b2;
+$entusiasmo: #3af282;
+$decepcion: #77758a;
+
+*/
+
+
 // Variables globales de configuracion
 var width = 1280, // ancho del grafico
     height = 720, // alto del grafico
@@ -10,7 +22,7 @@ var width = 1280, // ancho del grafico
     color = d3.scale // Colores de los clusters
         .ordinal()
         .domain(m)
-        .range( [ "#D4CD7B","#EA6153", "#588790", "#B88FAA", "#91C46E","#90836D" ] ),
+        .range( [ "#f22241","#ff9900", "#ffffff", "#b2b2b2", "#3af282","#77758a" ] ),
 	duration = 300; 
 	radioAcumulado = 0, // variable donde guardo el radio de todos los nodos en pantalla
 	supCirculos = 0, // variable donde guardo la superficie ocupada de los nodos en pantalla

@@ -229,7 +229,7 @@ socket.on('message', function(message) {
 			$("#reposo").css("opacity", "0");
 			
 			$(spanSensor).css("color", "rgba(255,255,255,1)");
-			$(spanSensor).parent().animate({transform: "translateY (-15px) scale (1.5,1.5)"},100);
+			$(spanSensor).parent().animate({transform: "translateY (-15px)"},100,'easeInOutBack');
 
 			pointers[msg.charAt( i - 1 )] 
 				.style("stroke-width", 5)
@@ -249,7 +249,7 @@ socket.on('message', function(message) {
 
 			$("#sensor" + sensores.indexOf(1)).css({color: "rgba(255,255,255,0.7)"},10);
 			var resetear = $("#sensor" + sensores.indexOf(1)).parent();
-			$(resetear).animate({transform: "translateY (0px) scale(1,1)"},10);
+			$(resetear).animate({transform: "translateY(0px)"},10,'easeInOutBack');
 
 			sensores[msg.charAt( i - 1 )] = 0;
 
