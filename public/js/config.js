@@ -23,6 +23,7 @@ var width = 1280, // ancho del grafico
         .ordinal()
         .domain(m)
         .range( [ "#f22241","#ff9900", "#ffffff", "#b2b2b2", "#3af282","#77758a" ] ),
+    emociones = ["SORPRESA", "FELICIDAD", "INDIFERENCIA", "TRISTEZA", "ENTUSIASMO", "DECEPCIÓN"],
 	duration = 300; 
 	radioAcumulado = 0, // variable donde guardo el radio de todos los nodos en pantalla
 	supCirculos = 0, // variable donde guardo la superficie ocupada de los nodos en pantalla
