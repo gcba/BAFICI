@@ -7,15 +7,19 @@
 html {
   -webkit-font-smoothing: subpixel-antialiased;
   overflow: hidden;
-  cursor: none; }
+  cursor: none;
+  height: 100%; }
 
 body {
   font-family: 'Futura';
   background-color: #001635;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  width: 100%;
+  min-height: 100%;
+  -webkit-box-shadow: inset 0px 0px 300px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0px 0px 300px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 0px 300px 0px rgba(0, 0, 0, 0.7);
+  padding: 0;
+  margin: 0; }
 
 header {
   position: relative;
@@ -113,7 +117,12 @@ footer {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0; }
+  left: 0;
+  background-color: rgba(0, 22, 53, 0.9);
+  z-index: 3000;
+  color: #fff; }
+  #reposo h1 {
+    text-align: center; }
 
 svg {
   position: fixed; }
