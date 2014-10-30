@@ -68,7 +68,8 @@ int[] xPos= {
 /* Variables para crear el time stamp en el archivo .txt que recopila el historial de botones
  pulsados. */
 
-PrintWriter output;
+PrintWriter output, o1, o2, o3,o4;
+
 int mes=month();
 int d=day();
 int h=hour();
@@ -176,6 +177,50 @@ void draw() {
     output.flush(); 
     output.close(); 
     exit();
+  }
+  
+  
+  //Creo los archivos para los parciales
+    int k=mouseY;
+
+  if (key=='f') {
+    o1 = createWriter("../../public/datos/innovatiba_0.csv");
+    delay(15);
+    o1.println("sensor"+","+"valor");
+    for (int i=0;i<6;i++) {
+      String sensor="/bSensor_";
+      o1.println(sensor+i+","+str(k));
+    }
+
+
+    o1.flush(); 
+    o1.close(); 
+  }
+  
+  if (key=='g') {
+    o2 = createWriter("../../public/datos/innovatiba_1.csv");
+    delay(15);
+    o2.println("sensor"+","+"valor");
+
+    for (int i=0;i<6;i++) {
+      String sensor="/bSensor_";
+      o2.println(sensor+i+","+str(k));
+    }
+    o2.flush(); 
+    o2.close(); 
+  }
+  
+  if (key=='h') {
+    o3 = createWriter("../../public/datos/innovatiba_2.csv");
+    delay(15);
+    o3.println("sensor"+","+"valor");
+
+    for (int i=0;i<6;i++) {
+      String sensor="/bSensor_";
+      o3.println(sensor+i+","+str(k));
+    }
+    o3.flush(); 
+    o3.close(); 
   }
 }
 
