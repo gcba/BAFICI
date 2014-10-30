@@ -90,7 +90,7 @@ void setup() {
   size(700, 212);
   background=loadImage("assets/background.png");
   println(Serial.list());
-  port=new Serial(this, Serial.list()[4], 115200 );
+  port=new Serial(this, Serial.list()[1], 115200 );
   port.clear();
   serial=port.readStringUntil(end);
   serial=null;
@@ -126,7 +126,6 @@ void setup() {
 
 void draw() {
   background(100, 80, 200);
-  frame.setLocation(5, 10);
   image(background, 0, 0);
   ellipseMode(CENTER);
   smooth();
