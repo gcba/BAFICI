@@ -109,11 +109,20 @@ footer {
     opacity: 0.5; }
 
 #reposo {
+  z-index: 999;
+  background-color: rgba(0, 22, 53, 0.9);
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0; }
+
+#graficos {
+  width: 100%; }
+  #graficos div {
+    display: inline-block;
+    width: 32%;
+    border: 1px solid red; }
 
 svg {
   position: fixed; }

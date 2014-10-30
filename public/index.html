@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <head>
-	<title>BAFICI v1.0.0a</title>
+	<title>Experimento Colaborativo de Emociones </title>
 	<link rel="stylesheet" href="css/base.css">
 	<script src='http://localhost:3000/socket.io/socket.io.js'></script>
 	<script src="lib/jquery-2.1.0.min.js"></script>
@@ -38,9 +38,13 @@
 	<div id="reposo" style="display: none; opacity: 0;">
 
 		<h1>Cómo viene el evento</h1>
-		<h2> Sesión <span class="nro">-</span> de 3</h2>
-		<svg class="chart"></svg>
-	<div>
+		<h2> Sesión <span id="nro">-</span> de 3</h2>
+		<div id="graficos">
+			<div><svg id="chart1"></svg></div>
+			<div><svg id="chart2"></svg></div>
+			<div><svg id="chart3"></svg></div>
+		</div>
+	</div>
 
 	<script src="js/generate-force.v1.0.0.alpha.js"></script>
 	<script src="js/graficos.js"></script>
