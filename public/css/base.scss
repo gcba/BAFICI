@@ -7,12 +7,12 @@
        url('../fonts/futura-medium-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-$sorpresa: #D4CD7B;
-$felicidad: #EA6153;
-$indiferencia: #588790;
-$tristeza: #B88FAA;
-$entusiasmo: #91A170;
-$decepcion: #90836D;
+$sorpresa: #f22241;
+$felicidad: #ff9900;
+$indiferencia: #ffffff;
+$tristeza: #b2b2b2;
+$entusiasmo: #3af282;
+$decepcion: #77758a;
 $separacion: 5px;
 $peso: 5px;
 
@@ -25,8 +25,8 @@ html {
 
 body {
     font-family: 'Futura';
-    background-color: #19BED5;
-    background: url('../img/bkg.png') no-repeat center center fixed; 
+    background-color: #202535;
+    // background: url('../img/bkg.png') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
