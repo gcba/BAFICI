@@ -28,7 +28,7 @@ var width = 1280, // ancho del grafico
 	supCirculos = 0, // variable donde guardo la superficie ocupada de los nodos en pantalla
 	limiteNodos = 200, // Threshold de display de nodos en pantalla
 	limitePorcentaje = 30, // Threshold de display de porcentaje de nodos en pantalla
-    tiempoSalvapantallas = 6; // Tiempo a esperar para que se active el salvapantallas (en segundos)
+    tiempoSalvapantallas = 3; // Tiempo a esperar para que se active el salvapantallas (en segundos)
 
 
 // variables globales especificas
