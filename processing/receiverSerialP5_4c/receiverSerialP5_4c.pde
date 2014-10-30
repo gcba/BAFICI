@@ -90,7 +90,7 @@ void setup() {
   size(700, 212);
   background=loadImage("assets/background.png");
   println(Serial.list());
-  port=new Serial(this, Serial.list()[1], 115200 );
+  port=new Serial(this, Serial.list()[10], 115200 );
   port.clear();
   serial=port.readStringUntil(end);
   serial=null;
