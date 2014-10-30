@@ -17,7 +17,6 @@ $.ajax({
 	},
 
      success: function() {
-     	console.log(data, textStatus, xhr);
      	// genero el grafico de barras
      	generoGrafico("datos/innovatiba_0.csv");
      }
