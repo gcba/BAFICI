@@ -7,19 +7,15 @@
 html {
   -webkit-font-smoothing: subpixel-antialiased;
   overflow: hidden;
-  cursor: none;
-  height: 100%; }
+  cursor: none; }
 
 body {
   font-family: 'Futura';
   background-color: #001635;
-  width: 100%;
-  min-height: 100%;
-  -webkit-box-shadow: inset 0px 0px 300px 0px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: inset 0px 0px 300px 0px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0px 0px 300px 0px rgba(0, 0, 0, 0.7);
-  padding: 0;
-  margin: 0; }
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 header {
   position: relative;
@@ -37,12 +33,10 @@ header {
     z-index: 100; }
   header h1 span.left {
     float: left;
-    padding-left: 90px;
-    padding-top: 40px; }
+    padding-left: 90px; }
   header h1 span.right {
     float: right;
-    padding-right: 90px;
-    padding-top: 40px; }
+    padding-right: 90px; }
 
 #logo {
   display: block;
@@ -121,19 +115,13 @@ footer {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
-  background-color: rgba(0, 22, 53, 0.9);
-  z-index: 3000;
-  color: #fff; }
-  #reposo h1 {
-    text-align: center; }
+  left: 0; }
 
 #graficos {
   width: 100%; }
-  #graficos div {
-    display: inline-block;
-    width: 32%;
-    border: 1px solid red; }
+
+.barras {
+  display: inline-block; }
 
 svg {
   position: fixed; }

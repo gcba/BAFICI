@@ -1,5 +1,3 @@
-@import 'components/bourbon/dist/bourbon';
-
 @font-face {
   font-family: 'Futura';
   src: url('../fonts/futura-medium-webfont.eot'); /* IE9 Compat Modes */
@@ -17,27 +15,22 @@ $entusiasmo: #3af282;
 $decepcion: #77758a;
 $separacion: 5px;
 $peso: 5px;
-$fondo: #001635;
 
 
 html {
     -webkit-font-smoothing: subpixel-antialiased;
     overflow: hidden;
     cursor: none;
-    height: 100%;
 }
 
 body {
     font-family: 'Futura';
-    background-color: $fondo;
-    width: 100%;
-    min-height: 100%;
-    -webkit-box-shadow: inset 0px 0px 300px 0px rgba(0,0,0,.7);
-    -moz-box-shadow: inset 0px 0px 300px 0px rgba(0,0,0,.7);
-    box-shadow: inset 0px 0px 300px 0px rgba(0,0,0,.7);
-    padding: 0;
-    margin: 0;
-
+    background-color: #001635;
+    // background: url('../img/bkg.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 header {
@@ -60,13 +53,11 @@ header {
     h1 span.left {
         float: left;
         padding-left: 90px;
-        padding-top: 40px;
     }
 
     h1 span.right {
         float: right;
         padding-right: 90px;
-        padding-top: 40px;
     }
 
 }
@@ -169,22 +160,16 @@ footer {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba($fondo,.9);
-    z-index: 3000;
-    color: #fff;
-    h1 {
-        text-align: center;
-    }
 }
 
 #graficos{
     width: 100%;
-    div{
-        display: inline-block;
-        width: *;
-        border: 1px solid red;
-    }
 }
+
+.barras{
+    display: inline-block;
+}
+
 
 svg {
     position:fixed;
