@@ -25,7 +25,7 @@ html {
 
 body {
     font-family: 'Futura';
-    background-color: #202535;
+    background-color: #001635;
     // background: url('../img/bkg.png') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -68,8 +68,8 @@ header {
     width: 400px;
     height: 150px;
     z-index: 55;
-    background: url('../img/logo.png') no-repeat 10px top ; 
-    background-size: 70%; 
+    background: url('../img/logo.svg') no-repeat 10px top ; 
+    background-size: 100%; 
     opacity: 0.5;
 }
 
