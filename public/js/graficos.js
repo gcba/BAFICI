@@ -2,6 +2,8 @@
   * Este archivo es responsable de chequear si existen los archivos
   * de estadísticas y de generar los gráficos en D3 si existen
   */
+
+var leoArchivos = [true,true,true]  
 var activoSS = false;
 var archivo01 = ["datos/innovatiba_0.csv", "#chart1"],
 	archivo02 = ["datos/innovatiba_1.csv", "#chart2"],
@@ -12,13 +14,17 @@ function checkeoArchivos(archivo){
         url: archivo[0],
         type: "HEAD",
         success: function() {
-            generoGrafico(archivo[0], archivo[1]);
-            activoSS = true;
+            if (leoArchivos[archivo[1].slice(-1)-1]){
+                generoGrafico(archivo[0], archivo[1]);
+                activoSS = true;
+            }
         }
     });
 }
 
 function generoGrafico(archivo, svgid) {
+
+    leoArchivos[(svgid[1].slice(-1))-1] = false;
 
     var ancho = 90 / (svgid.slice(-1)) ; 
     ancho = ancho + "%";
