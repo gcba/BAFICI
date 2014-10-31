@@ -13,7 +13,7 @@
  
  Librería OSC: http://www.sojamo.de/libraries/oscP5/
  Librería Arduino: ya viene con la versión de Processing 2.0.3 
-                   (https://processing.org/download/?processing)                  
+ (https://processing.org/download/?processing)                  
  */
 
 
@@ -39,6 +39,15 @@ Serial port;
 int ARRAY_SIZE=6;
 boolean[] flags=new boolean[ARRAY_SIZE];
 MessageOSC[] m= new MessageOSC[ARRAY_SIZE];
+MessageOSC[] t= new MessageOSC[ARRAY_SIZE];
+int _temp=0;
+int[] test= {
+  0, 0, 0, 0, 0, 0
+};
+int[] test2= {
+  0, 0, 0, 0, 0, 0
+};
+
 
 /* Variables para mapeo de datos que se envían por OSC y el valor de incremento
  Con estos valores ajusto el rango de los datos y la "velocidad" en que se llega del 
@@ -108,6 +117,7 @@ void setup() {
 
   for (int i=0;i<m.length;i++) {
     m[i]= new MessageOSC(i, minCounter, maxCounter, incrementVal);
+    t[i]= new MessageOSC(i, minCounter, maxCounter, incrementVal);
   }
 
   // Creo un archivo .txt con hora y fecha en que se ejecutó la aplicación
@@ -162,7 +172,19 @@ void draw() {
     // Le paso booleanos de cada sensor al objeto sendOSC para que envíe en tiempo real a node.js
     for (int i=0;i<m.length;i++) {
       m[i].sendOSC(flags[i]);
+      m[i].temporal(flags[i]);
+      test[i]= t[i].temporal(flags[i]);
     }
+
+    for (int j=0;j<m.length;j++) {
+      test2[j]=test2[j]+test[j];
+      println("Sensor_"+j+" "+test2[j]);
+    }
+  
+  if(key=='f'){
+  for(){
+  }
+  }
 
     //Si el conómetro llega al tiempo establecido guarda los datos de los sensores y se reinicia.
     if (millis()-start >= elapsedTime) {

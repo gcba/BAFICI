@@ -77,5 +77,52 @@ class MessageOSC {
       oscP5.send(myMessage, myRemoteLocation);
     }
   }
+
+  int temporal(boolean cbFlag) {
+    int trueVal=1;
+    int falseVal=0;
+    bFlag=cbFlag;
+    int bT2=0;
+    int bT=0;
+
+
+    //Declaro los tags de los mensajes OSC
+    String sensorValue= "/sensor_";
+    String bSensor="/bSensor_";
+
+    String[] bMessage= new String [2];
+    bMessage[0]=bSensor;
+    bMessage[1]=nf(index, 1);
+    String tagFlag= join(bMessage, "");
+
+    String[] valMessage= new String [2];
+    valMessage[0]=sensorValue;
+    valMessage[1]=nf(index, 1);
+    String tagSensorValue= join(valMessage, "");
+
+    //Si el botón es pulsado incremento una variable que será enviada a node.js
+
+    if (bFlag) {
+      counter+=incrementVal;
+
+      temp=int(constrain(counter, minCounter, maxCounter));
+      bPrinter=true;
+      
+      
+    }
+    else {
+      //Cuando el botón deja de ser pulsado guardo el valor en memoria para luego volvar al .txt
+      if (bPrinter) {
+        output.println(hour()+":"+minute()+":"+second()+","+tagFlag+"," + temp);
+        bPrinter=false;
+        bT=temp;
+      }
+      //Si el botón no es pulsado envío un mensaje de valor 0 (cero) de forma contínua.
+
+      counter=0;
+      
+    }
+    return bT;
+  }
 }
 
