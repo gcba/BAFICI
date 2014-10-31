@@ -27,7 +27,7 @@ function generoGrafico(archivo, svgid) {
     $("#nro").html(svgid.slice(-1));
 
     var width = '48%',
-        barHeight = 80;
+        barHeight = 60;
 
     var x = d3.scale.linear()
         .range([0, width]);
