@@ -39,7 +39,6 @@ Serial port;
 int ARRAY_SIZE=6;
 boolean[] flags=new boolean[ARRAY_SIZE];
 MessageOSC[] m= new MessageOSC[ARRAY_SIZE];
-boolean cut_0=false;
 
 /* Variables para mapeo de datos que se envían por OSC y el valor de incremento
  Con estos valores ajusto el rango de los datos y la "velocidad" en que se llega del 
@@ -69,24 +68,12 @@ int[] xPos= {
 /* Variables para crear el time stamp en el archivo .txt que recopila el historial de botones
  pulsados. */
 
-PrintWriter output, o1, o2, o3,o4;
-
+PrintWriter output;
 int mes=month();
 int d=day();
 int h=hour();
 int min=minute();
 int s=second();
-
-/*
-Temporales de cada sensor*/
-
-int temp_0=0;
-int temp_1=0;
-int temp_2=0;
-int temp_3=0;
-int temp_4=0;
-int temp_5=0;
-
 
 
 /* Variables para el cronómetro que mide cada cuántos segundos paso al archivo .txt el 
@@ -103,7 +90,7 @@ void setup() {
   size(700, 212);
   background=loadImage("assets/background.png");
   println(Serial.list());
-  port=new Serial(this, Serial.list()[10], 115200 );
+  port=new Serial(this, Serial.list()[0], 115200 );
   port.clear();
   serial=port.readStringUntil(end);
   serial=null;
@@ -139,6 +126,7 @@ void setup() {
 
 void draw() {
   background(100, 80, 200);
+  frame.setLocation(5, 10);
   image(background, 0, 0);
   ellipseMode(CENTER);
   smooth();
@@ -182,10 +170,6 @@ void draw() {
       output.flush();
     }
   }
-  
-  /****
-  *//////
-  println("TEMPORAL: "+temp_0);
 
   /* Para cerrar la sesión apreto la tecla 'e' y de este modo guardo los datos restantes que pudieron
    no haberse guardado con el cronómetro. */
@@ -193,50 +177,6 @@ void draw() {
     output.flush(); 
     output.close(); 
     exit();
-  }
-  
-  
-  //Creo los archivos para los parciales
-    int k=mouseY;
-
-  if (key=='f') {
-    o1 = createWriter("../../public/datos/innovatiba_0.csv");
-    delay(15);
-    o1.println("sensor"+","+"valor");
-    for (int i=0;i<6;i++) {
-      String sensor="/bSensor_";
-      o1.println(sensor+i+","+str(k));
-    }
-
-
-    o1.flush(); 
-    o1.close(); 
-  }
-  
-  if (key=='g') {
-    o2 = createWriter("../../public/datos/innovatiba_1.csv");
-    delay(15);
-    o2.println("sensor"+","+"valor");
-
-    for (int i=0;i<6;i++) {
-      String sensor="/bSensor_";
-      o2.println(sensor+i+","+str(k));
-    }
-    o2.flush(); 
-    o2.close(); 
-  }
-  
-  if (key=='h') {
-    o3 = createWriter("../../public/datos/innovatiba_2.csv");
-    delay(15);
-    o3.println("sensor"+","+"valor");
-
-   /* for (int i=0;i<6;i++) {
-      String sensor="/bSensor_";
-      o3.println(sensor+i+","+str(k));
-    }*/
-    o3.flush(); 
-    o3.close(); 
   }
 }
 
