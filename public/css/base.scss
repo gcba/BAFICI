@@ -4,15 +4,17 @@
 @include font-face(Futura, '../fonts/futura-medium-webfont');
 @include font-face(Gotham Light, '../fonts/Gotham-Light');
 
+
 $sorpresa: #f22241;
 $felicidad: #ff9900;
-$indiferencia: #ffffff;
-$tristeza: #b2b2b2;
+$indiferencia: #c0c0c0;
+$tristeza: #707070;
 $entusiasmo: #3af282;
 $decepcion: #77758a;
+$fondo: #001635;
 $separacion: 5px;
 $peso: 5px;
-$fondo: #001635;
+
 
 
 html {
@@ -24,15 +26,7 @@ html {
 
 body {
     font-family: 'Futura';
-    background-color: $fondo;
-    width: 100%;
-    min-height: 100%;
-    -webkit-box-shadow: inset 0px 0px 300px 0px rgba(0,0,0,.7);
-    -moz-box-shadow: inset 0px 0px 300px 0px rgba(0,0,0,.7);
-    box-shadow: inset 0px 0px 300px 0px rgba(0,0,0,.7);
-    padding: 0;
-    margin: 0;
-
+    background-color: #001635;
 }
 
 header {
@@ -54,14 +48,15 @@ header {
 
     h1 span.left {
         float: left;
-        padding-left: 90px;
         padding-top: 40px;
+        padding-left: 90px;
+
     }
 
     h1 span.right {
         float: right;
-        padding-right: 90px;
         padding-top: 40px;
+        padding-right: 90px;
     }
 
 }
@@ -70,9 +65,9 @@ header {
     display: block;
     margin: 0px auto;
     width: 400px;
-    height: 150px;
+    height: 170px;
     z-index: 55;
-    background: url('../img/logo.svg') no-repeat 10px top ; 
+    background: url('../img/logo.svg') no-repeat 10px 20px; 
     background-size: 100%; 
     opacity: 0.5;
 }
@@ -158,13 +153,12 @@ footer {
 
 #reposo {
     z-index: 999;
-    background-color: rgba(0, 22, 53, 0.9);
+    background-color: rgba(lighten(desaturate($fondo, 90), 20), 0.9);
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba($fondo,.9);
     z-index: 3000;
     color: #fff;
     h1 {
@@ -173,7 +167,12 @@ footer {
         font-weight: normal;
         font-size: 5em;
         text-transform: uppercase;
-        padding-top: 50px;
+        padding-top: 150px;
+    }
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        text-transform: uppercase;
     }
 }
 
@@ -181,19 +180,18 @@ footer {
     display: block;
     width: 90%;
     margin: 0 auto;
-    position: relative;
-    div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+    margin-left: -55px;
+    margin-top: 30px;
+    .barras{
         width: 420px;
-        display: block;
         text-align: center;
-        margin: 0 auto;
+        display: inline-block;
     }
 }
+
+
+
+
 
 svg {
     position:fixed;

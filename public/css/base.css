@@ -17,14 +17,7 @@ html {
 
 body {
   font-family: 'Futura';
-  background-color: #001635;
-  width: 100%;
-  min-height: 100%;
-  -webkit-box-shadow: inset 0px 0px 300px 0px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: inset 0px 0px 300px 0px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0px 0px 300px 0px rgba(0, 0, 0, 0.7);
-  padding: 0;
-  margin: 0; }
+  background-color: #001635; }
 
 header {
   position: relative;
@@ -42,20 +35,20 @@ header {
     z-index: 100; }
   header h1 span.left {
     float: left;
-    padding-left: 90px;
-    padding-top: 40px; }
+    padding-top: 40px;
+    padding-left: 90px; }
   header h1 span.right {
     float: right;
-    padding-right: 90px;
-    padding-top: 40px; }
+    padding-top: 40px;
+    padding-right: 90px; }
 
 #logo {
   display: block;
   margin: 0px auto;
   width: 400px;
-  height: 150px;
+  height: 170px;
   z-index: 55;
-  background: url("../img/logo.svg") no-repeat 10px top;
+  background: url("../img/logo.svg") no-repeat 10px 20px;
   background-size: 100%;
   opacity: 0.5; }
 
@@ -121,13 +114,12 @@ footer {
 
 #reposo {
   z-index: 999;
-  background-color: rgba(0, 22, 53, 0.9);
+  background-color: rgba(70, 76, 85, 0.9);
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 22, 53, 0.9);
   z-index: 3000;
   color: #fff; }
   #reposo h1 {
@@ -136,23 +128,22 @@ footer {
     font-weight: normal;
     font-size: 5em;
     text-transform: uppercase;
-    padding-top: 50px; }
+    padding-top: 150px; }
+  #reposo h2 {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase; }
 
 #graficos {
   display: block;
   width: 90%;
   margin: 0 auto;
-  position: relative; }
-  #graficos div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+  margin-left: -55px;
+  margin-top: 30px; }
+  #graficos .barras {
     width: 420px;
-    display: block;
     text-align: center;
-    margin: 0 auto; }
+    display: inline-block; }
 
 svg {
   position: fixed; }
@@ -168,10 +159,10 @@ circle {
   fill: #ff9900; }
 
 .indiferencia {
-  fill: white; }
+  fill: #c6baba; }
 
 .tristeza {
-  fill: #baaaaa; }
+  fill: #7b6565; }
 
 .entusiasmo {
   fill: #30fd80; }
@@ -195,11 +186,11 @@ circle {
 
 .indiferencia span {
   padding-bottom: 5px;
-  border-bottom: 5px white solid; }
+  border-bottom: 5px silver solid; }
 
 .tristeza span {
   padding-bottom: 5px;
-  border-bottom: 5px #b2b2b2 solid; }
+  border-bottom: 5px #707070 solid; }
 
 .entusiasmo span {
   padding-bottom: 5px;

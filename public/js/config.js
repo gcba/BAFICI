@@ -2,8 +2,8 @@
 
 $sorpresa: #f22241;
 $felicidad: #ff9900;
-$indiferencia: #ffffff;
-$tristeza: #b2b2b2;
+$indiferencia: #c0c0c0;
+$tristeza: #707070;
 $entusiasmo: #3af282;
 $decepcion: #77758a;
 
@@ -22,7 +22,7 @@ var width = 1280, // ancho del grafico
     color = d3.scale // Colores de los clusters
         .ordinal()
         .domain(m)
-        .range( [ "#f22241","#ff9900", "#ffffff", "#b2b2b2", "#3af282","#77758a" ] ),
+        .range( [ "#f22241","#ff9900", "#c0c0c0", "#707070", "#3af282","#77758a" ] ),
     emociones = ["SORPRESA", "FELICIDAD", "INDIFERENCIA", "TRISTEZA", "ENTUSIASMO", "DECEPCIÓN"],
 	duration = 300; 
 	radioAcumulado = 0, // variable donde guardo el radio de todos los nodos en pantalla

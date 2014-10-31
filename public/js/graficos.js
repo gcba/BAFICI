@@ -2,31 +2,32 @@
   * Este archivo es responsable de chequear si existen los archivos
   * de estadísticas y de generar los gráficos en D3 si existen
   */
-
+var activoSS = false;
 var archivo01 = ["datos/innovatiba_0.csv", "#chart1"],
-	archivo02 = ["!datos/innovatiba_1.csv", "#chart2"],
-	archivo03 = ["!datos/innovatiba_2.csv", "#chart3"];
-
-
-
+	archivo02 = ["datos/innovatiba_1.csv", "#chart2"],
+	archivo03 = ["datos/innovatiba_2.csv", "#chart3"];
 
 function checkeoArchivos(archivo){
-
     $.ajax({
         url: archivo[0],
         type: "HEAD",
         success: function() {
             generoGrafico(archivo[0], archivo[1]);
-            console.log ("genero grafico");
+            activoSS = true;
         }
     });
-
-
 }
 
 function generoGrafico(archivo, svgid) {
-    var width = 420,
-        barHeight = 40;
+
+    var ancho = 90 / (svgid.slice(-1)) ; 
+    ancho = ancho + "%";
+    $(".barras").css("width", ancho);
+
+    $("#nro").html(svgid.slice(-1));
+
+    var width = '48%',
+        barHeight = 80;
 
     var x = d3.scale.linear()
         .range([0, width]);
@@ -60,7 +61,21 @@ function generoGrafico(archivo, svgid) {
         bar.append("text")
             .attr("x", 0)
             .attr("y", barHeight / 2)
-            .attr("dy", ".26em")
+            .attr("dy", ".1em")
+            .attr("dx", ".8em")
+            .attr("fill", "black")
+            .style("filter", "url(#shadow)")
+            .style("opacity", 0.8)
+            .text(function(d,i) {
+                return emociones[i];
+            });
+
+        bar.append("text")
+            .attr("x", 0)
+            .attr("y", barHeight / 2)
+            .attr("dy", ".1em")
+            .attr("dx", ".8em")
+            .attr("fill", "white")
             .text(function(d,i) {
                 return emociones[i];
             });
@@ -73,14 +88,13 @@ function type(d) {
     return d;
 }
 
-var tiempoInactivo = 0;
+
 setInterval(
     function () {
-        console.log("vigilo archivos");
         checkeoArchivos(archivo01);
         checkeoArchivos(archivo02);
         checkeoArchivos(archivo03);
-    }, tiempoSalvapantallas * 999);
-
-
-
+        if (!activoSS) {
+            tiempoInactivo = 0;
+        } 
+    }, tiempoSalvapantallas * 500);
