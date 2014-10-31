@@ -14,7 +14,9 @@ void draw() {
 
 
   if (key=='f') {
-    o1 = createWriter("../../public/datos/innovatiba_0.csv");
+   // o1 = createWriter("../../public/datos/innovatiba_0.csv");
+       o1 = createWriter("data/innovatiba_0.csv");
+
     delay(15);
     o1.println("sensor"+","+"valor");
     for (int i=0;i<6;i++) {
@@ -28,7 +30,9 @@ void draw() {
   }
   
   if (key=='g') {
-    o2 = createWriter("../../public/datos/innovatiba_1.csv");
+    //o2 = createWriter("../../public/datos/innovatiba_1.csv");
+        o2 = createWriter("data/innovatiba_1.csv");
+
     delay(15);
     o2.println("sensor"+","+"valor");
 
@@ -41,7 +45,8 @@ void draw() {
   }
   
   if (key=='h') {
-    o3 = createWriter("../../public/datos/innovatiba_2.csv");
+   // o3 = createWriter("../../public/datos/innovatiba_2.csv");
+    o3 = createWriter("data/innovatiba_2.csv");
     delay(15);
     o3.println("sensor"+","+"valor");
 

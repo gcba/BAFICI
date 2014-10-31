@@ -47,6 +47,9 @@ int[] test= {
 int[] test2= {
   0, 0, 0, 0, 0, 0
 };
+int[] test3= {
+  0, 0, 0, 0, 0, 0
+};
 
 
 /* Variables para mapeo de datos que se envían por OSC y el valor de incremento
@@ -72,12 +75,12 @@ int[] yPos= {
 int[] xPos= {
   0, 112, 226, 337, 451, 563
 };
-
+boolean flagClean=false;
 
 /* Variables para crear el time stamp en el archivo .txt que recopila el historial de botones
  pulsados. */
 
-PrintWriter output, output1, output2;
+PrintWriter output, output1, output2, output10, output20;
 int mes=month();
 int d=day();
 int h=hour();
@@ -176,25 +179,40 @@ void draw() {
       test[i]= t[i].temporal(flags[i]);
     }
 
-
     for (int j=0;j<m.length;j++) {
       test2[j]=test2[j]+test[j];
-          println(test2[j]);
-
+      //test3[j]=test3[j]+test[j]test2[j];
+      println("2: "+test2[2]);
+      println("3: "+test3[2]);
     }
+
     if (key=='f') {
       output1 = createWriter("../../public/datos/innovatiba_0.csv");
       delay(15);
       output1.println("sensor"+","+"valor");
 
       for (int j=0;j<m.length;j++) {
-        test2[j]=test2[j]+test[j];
         String sensor="/bSensor_";
         output1.println(sensor+j+","+str(test2[j]));
       }
-
       output1.flush(); 
       output1.close();
+
+      /*
+      output10 = createWriter("../../public/datos/innovatiba_10.csv");
+       output10.println("end");
+       output10.flush(); 
+       output10.close();
+       */
+      //Limpio el array
+      delay(4000);
+      flagClean=true;
+      if (flagClean) {
+        for (int j=0;j<m.length;j++) {
+          test2[j]=0;
+        }
+        flagClean=false;
+      }
     }
 
     //Si el conómetro llega al tiempo establecido guarda los datos de los sensores y se reinicia.
