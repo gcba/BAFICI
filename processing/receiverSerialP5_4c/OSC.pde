@@ -66,7 +66,7 @@ class MessageOSC {
       //Cuando el botón deja de ser pulsado guardo el valor en memoria para luego volvar al .txt
       if (bPrinter) {
         output.println(hour()+":"+minute()+":"+second()+","+tagFlag+"," + temp);
-        temp_0=temp_0+temp;
+     //temp_0=temp_0+temp;
         //o1.println(tagFlag+","+"e");
         bPrinter=false;
       }
