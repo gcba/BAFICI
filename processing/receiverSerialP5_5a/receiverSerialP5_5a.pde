@@ -77,7 +77,7 @@ int[] xPos= {
 /* Variables para crear el time stamp en el archivo .txt que recopila el historial de botones
  pulsados. */
 
-PrintWriter output;
+PrintWriter output, output1, output2;
 int mes=month();
 int d=day();
 int h=hour();
@@ -176,15 +176,26 @@ void draw() {
       test[i]= t[i].temporal(flags[i]);
     }
 
+
     for (int j=0;j<m.length;j++) {
       test2[j]=test2[j]+test[j];
-      println("Sensor_"+j+" "+test2[j]);
+          println(test2[j]);
+
     }
-  
-  if(key=='f'){
-  for(){
-  }
-  }
+    if (key=='f') {
+      output1 = createWriter("../../public/datos/innovatiba_0.csv");
+      delay(15);
+      output1.println("sensor"+","+"valor");
+
+      for (int j=0;j<m.length;j++) {
+        test2[j]=test2[j]+test[j];
+        String sensor="/bSensor_";
+        output1.println(sensor+j+","+str(test2[j]));
+      }
+
+      output1.flush(); 
+      output1.close();
+    }
 
     //Si el conómetro llega al tiempo establecido guarda los datos de los sensores y se reinicia.
     if (millis()-start >= elapsedTime) {
