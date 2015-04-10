@@ -58,7 +58,7 @@ BAFICI
 
 - Comiteá tus cambios
 
-		git commit -am "Comentario del commit"
+		git commit -m "Comentario del commit"
 
 
 - Hacé un Push a la rama 
